@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<!--Suit to validate UI test cases-->
+<suite name="CodingRoundTests" thread-count="2" verbose="1" parallel="false">
+    <test name="SignInTest">
+        <classes>
+            <class name="SignInTest">
+                <methods>
+                    <include name="shouldThrowAnErrorIfSignInDetailsAreMissing" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="HotelBookingTest">
+        <classes>
+            <class name="HotelBookingTest">
+                <methods>
+                    <include name="shouldBeAbleToSearchForHotels" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="FlightBookingTest">
+        <classes>
+            <class name="FlightBookingTest">
+                <methods>
+                    <include name="testThatResultsAppearForAOneWayJourney" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
